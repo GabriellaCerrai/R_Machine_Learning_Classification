@@ -100,7 +100,9 @@ plot(as.numeric(lisst)~l2_seq,type= 'l', col = 'blue')
 which.min(unlist(lisst)) # 10 is the minimum
 abline(v=l2_seq[10], col="red")
 
+#===========================
 # create new neural network
+#===========================
 newmodel = h2o.deeplearning(x= 2:5, y= 1,
 training_frame = dat_train ,
 validation_frame = dat_val,
@@ -117,7 +119,9 @@ reproducible = TRUE,
 seed=2)
 plot(newmodel)
 
+#=========================
 # creating a reponse curve
+#=========================
 M = 100
 x1_dummy = seq(min(Asymmetry),max(Asymmetry), length = M)
 x2_dummy = seq(min(Intensity),max(Intensity), length = M)
