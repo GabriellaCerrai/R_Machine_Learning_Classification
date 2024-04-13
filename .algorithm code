@@ -5,7 +5,7 @@ library(tree)
 library(rpart)
 library(rpart.plot)
 library(colorspace)
-library(h2o$
+library(h2o)
 
 #========================================
 # CREATE COLOUR SCHEME FOR SCATTER PLOTS: 
